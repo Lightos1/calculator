@@ -1,0 +1,76 @@
+body
+{
+font-family: 'Kanit', sans-serif;
+font-size: 90px;
+margin: -0;
+}
+
+#equal
+{
+background-color: blue;
+}
+
+table
+{
+width: 100%;
+height: 70vh;
+color: white;
+background-color: rgb(40, 40, 
+40);
+}
+
+td
+{
+width: 25%;
+font-family: 'Kanit', sans-serif;
+font-size: 90px;
+background-color: rgb(12, 12, 12);
+color: white;
+text-align: center;
+}
+
+td:hover
+{
+background-color: rgb(139, 137, 137);
+cursor: pointer;
+}
+
+
+
+#equal:hover
+{
+background-color: rgb(139, 137, 137);
+}
+
+#result
+{
+height: 28vh;
+display: flex;
+justify-content: end;
+align-items: center;
+font-size: 170px;
+background: rgb(40, 40, 40);
+color: white;
+width: 100%;
+}
+
+.z
+{
+background-color: rgb(23, 23, 23);
+}
+
+.z:hover
+{
+background-color: rgb(139, 137, 137);
+}
+
+#restart
+{
+background-color: red;
+}
+
+#restart:hover
+{
+background-color: rgba(61, 57, 57, 0.384);
+}
+

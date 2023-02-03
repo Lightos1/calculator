@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+<script>
+
+    function appendoperation (operation){
+    document.getElementById('result').innerHTML+=operation;}
+
+    function calculate (){
+    let container=document.getElementById('result');
+    let result=eval(container.innerHTML);
+    container.innerHTML=result;
+}
+
+    function deletelast (){
+    let container=document.getElementById('result');
+    container.innerHTML=container.innerHTML.slice(0, -1);
+}
+
+    function resetC () {
+        let container=document.getElementById('result');
+    container.innerHTML=container.innerHTML.slice(0, 0);
+
+    }
+</script>
+
+
+
+</head>
+<body>
+
+    <div id="result"></div>
+
+    <table>
+    <tr>
+        <td onclick="appendoperation()" class="z">%</td>
+        <td onclick="resetC()" id="restart">Reset</td>
+        <td onclick="deletelast()" class="z">Delete</td>
+        <td onclick="appendoperation('/')" class="z">/</td>
+    </tr>
+    <tr>
+        <td onclick="appendoperation(7)">7</td>
+        <td onclick="appendoperation(8)">8</td>
+        <td onclick="appendoperation(9)" >9</td>
+        <td onclick="appendoperation('*')" class="z">*</td>
+    </tr>
+
+    <tr>
+        <td onclick="appendoperation(4)">4</td>
+        <td onclick="appendoperation(5)">5</td>
+        <td onclick="appendoperation(6)">6</td>
+        <td onclick="appendoperation('-')" class="z">-</td>
+    </tr>
+
+    <tr>
+        <td onclick="appendoperation(1)">1</td>
+        <td onclick="appendoperation(2)">2</td>
+        <td onclick="appendoperation(3)">3</td>
+        <td onclick="appendoperation('+')" class="z">+</td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td onclick="appendoperation(0)">0</td>
+        <td onclick="appendoperation('.')">,</td>
+        <td onclick="calculate()" id="equal">=</td>
+    </tr>
+
+    </table>
+    
+</body>
+</html>
